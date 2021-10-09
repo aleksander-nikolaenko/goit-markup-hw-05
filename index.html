@@ -31,7 +31,11 @@
           >
           <ul class="header-nav-list list">
             <li class="header-nav-item">
-              <a class="header-nav-link header-link link accent-text" href="./index.html">Студия</a>
+              <a
+                class="header-nav-link header-link link accent-text current-page"
+                href="./index.html"
+                >Студия</a
+              >
             </li>
 
             <li class="header-nav-item">
@@ -71,7 +75,7 @@
       <section class="hero section">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
 
-        <button class="hero-btn" type="button">Заказать услугу</button>
+        <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
       </section>
       <!-- Наши особенности features section  -->
       <section class="features section">
@@ -136,27 +140,36 @@
 
           <ul class="about-list list">
             <li class="about-list-item">
-              <img
-                src="./images/about-1.jpg"
-                alt="рабочее место разработчика монитор с кодом и руки на клавиатуре"
-                width="370"
-              />
+              <div class="about-list-container">
+                <img
+                  src="./images/about-1.jpg"
+                  alt="рабочее место разработчика монитор с кодом и руки на клавиатуре"
+                  width="370"
+                />
+                <p class="about-list-text">Десктопные приложения</p>
+              </div>
             </li>
 
             <li class="about-list-item">
-              <img
-                src="./images/about-2.jpg"
-                alt="рабочее место разработчика ноутбук с дизайном мобильного сайта и руки с телефоном"
-                width="370"
-              />
+              <div class="about-list-container">
+                <img
+                  src="./images/about-2.jpg"
+                  alt="рабочее место разработчика ноутбук с дизайном мобильного сайта и руки с телефоном"
+                  width="370"
+                />
+                <p class="about-list-text">Мобильные приложения</p>
+              </div>
             </li>
 
             <li class="about-list-item">
-              <img
-                src="./images/about-3.jpg"
-                alt="рабочее место разработчика монитор с палитрой цветов на экране и планшет в руках с палитрой"
-                width="370"
-              />
+              <div class="about-list-container">
+                <img
+                  src="./images/about-3.jpg"
+                  alt="рабочее место разработчика монитор с палитрой цветов на экране и планшет в руках с палитрой"
+                  width="370"
+                />
+                <p class="about-list-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -420,7 +433,7 @@
           <ul class="footer-social-list list">
             <li class="footer-social-item">
               <a href="" class="footer-social-link link">
-                <svg class="social-icon" width="20" height="20">
+                <svg class="footer-social-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-social-instagram"></use>
                 </svg>
               </a>
@@ -428,7 +441,7 @@
 
             <li class="footer-social-item">
               <a href="" class="footer-social-link link">
-                <svg class="social-icon" width="20" height="20">
+                <svg class="footer-social-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-social-twitter "></use>
                 </svg>
               </a>
@@ -436,7 +449,7 @@
 
             <li class="footer-social-item">
               <a href="" class="footer-social-link link">
-                <svg class="social-icon" width="20" height="20">
+                <svg class="footer-social-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-social-facebook"></use>
                 </svg>
               </a>
@@ -444,7 +457,7 @@
 
             <li class="footer-social-item">
               <a href="" class="footer-social-link link">
-                <svg class="social-icon" width="20" height="20">
+                <svg class="footer-social-icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-social-linkedin"></use>
                 </svg>
               </a>
@@ -453,5 +466,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="close-icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-close "></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
